@@ -1,0 +1,30 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeroalva/burger.git"
+  },
+  "keywords": [
+    "burger",
+    "bootcamp"
+  ],
+  "author": "Jeronimo Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeroalva/burger/issues"
+  },
+  "homepage": "https://github.com/jeroalva/burger#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}

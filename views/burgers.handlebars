@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row mt-3 mb-3">
+        <div class="col" id="title">
+            <h1 class="text-center">
+                <img src="/assets/images/burgerLogo.png" alt="burgerLogo" style="width: 10%;">
+                Eat the burger
+            </h1>
+        </div>
+    </div>
+    <div class="row mb-6" id="uneatenBurgers">
+        <div class="col">
+            {{#each burgers}}
+                {{#unless this.status}}
+                    <div class="row border border-light rounded mr-2">
+                        <div class="col">
+                            <div class="text-dark ml-2 mt-2 mb-2" id={{this.id}}>{{this.name}}</div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary float-right" id={{this.id}}>Devour it!</button>
+                        </div>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col">
+            {{#each burgers}}
+                {{#if this.status}}
+                    <div class="row border border-light rounded ml-2 bg-secondary">
+                        <div class="text-light ml-2 mt-2 mb-2" id={{this.id}}>{{this.name}}</div>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>            
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>      </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="form-group">
+                    <label for="burgerInput">New burger</label>
+                    <textarea class="form-control" id="burgerInput" rows="3"></textarea>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-primary mb-6">Submit</button>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col">
+                <p class="text-center text-muted mt-3">Jeronimo Alvarez®</p>
+            </div>
+        </div>
+</div>
