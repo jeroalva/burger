@@ -6,3 +6,4 @@ CREATE TABLE burgers (
     name VARCHAR(500) NOT NULL,
     status BOOLEAN DEFAULT false
 );
+SELECT * FROM burgers;
