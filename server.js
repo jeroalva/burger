@@ -2,7 +2,7 @@ var exphbs = require("express-handlebars");
 require("dotenv").config();
 var express = require("express");
 var app = express();
-var PORT = process.env.SERVER_PORT
+var PORT = process.env.PORT
 require("./config/connection");
 var orm = require("./config/orm");
 
