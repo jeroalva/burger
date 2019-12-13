@@ -26,7 +26,12 @@ app.put("/api/devour/:id", function(req, res){
 })
 
 app.post("/api/new", function(req, res){
-    orm.insertOne("burgers", req.body.name, renderLoad, res);
+    if(!req.body.name){
+        res.send("empty");
+    }
+    else{
+        orm.insertOne("burgers", req.body.name, renderLoad, res);
+    }
 })
 
 app.listen(PORT, function() {
